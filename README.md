@@ -3,7 +3,7 @@ A simple math equations plotter in python.
 
 Test its limits by adding your own equations!
 
-Zoom in and out with arrow keys, change current equation with SPACE. Feel free to add more functionalities to it.
+Zoom in and out with arrow keys, change current equation with 'SPACE', reset zoom with 'H'. Feel free to add more functionalities to it.
 
 Run with ```` python3 mathplotter.py ```` <br />
 Get pygame ```` sudo apt-get install python3-pygame ````
