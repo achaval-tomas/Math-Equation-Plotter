@@ -8,6 +8,7 @@ Zoom in and out with arrow keys, change current equation with 'SPACE', reset zoo
 Run with ```` python3 mathplotter.py ```` <br />
 Get pygame ```` sudo apt-get install python3-pygame ````
 
-Preview: <br />
+Preview:
+
 https://github.com/achaval-tomas/Math-Equation-Plotter/assets/134091945/ec2f8b2c-93f7-43cc-86f7-ecb949551104
 
