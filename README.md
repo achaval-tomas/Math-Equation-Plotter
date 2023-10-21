@@ -10,5 +10,8 @@ Get pygame ```` sudo apt-get install python3-pygame ````
 
 Preview:
 
-https://github.com/achaval-tomas/Math-Equation-Plotter/assets/134091945/ec2f8b2c-93f7-43cc-86f7-ecb949551104
+
+https://github.com/achaval-tomas/Math-Equation-Plotter/assets/134091945/d9bdd034-f521-4ec4-a28a-ced7b9ffe04a
+
+
 
