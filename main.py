@@ -58,7 +58,7 @@ def rescale(dir):
 
 # Change the equation to the next one in the equations array.
 def changeEquation(eqIndx):
-    newIndx = (eqIndx + 1) % equations.__len__()
+    newIndx = (eqIndx + 1) % len(equations)
     newEq = equations[newIndx]
     displayAll(scale, newEq)
     return newEq, newIndx
