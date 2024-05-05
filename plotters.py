@@ -1,4 +1,3 @@
-from math import floor
 from commonequations import power
 from setup import *
 from pygame import draw, display
