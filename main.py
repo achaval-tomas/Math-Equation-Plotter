@@ -1,6 +1,7 @@
 from pygame import *
 from commonequations import *
-from math import floor
+from plotters import *
+from setup import *
 
 init() # pygame init.
 
@@ -11,41 +12,6 @@ Press SPACE to navigate through different loaded equations.
 Press I to plot the integral of the current function (in the current frame).
 
 '''
-
-# Equations are represented as f(x) = sum(Equation[i]*x^i)
-equations = [   classicLinear(),
-                classicCuadratic(),
-                classicCubic(),
-                taylorForCos(),
-                taylorForSin(),
-                exponential(),
-                naturalLog(),
-                funQuintic()
-                # Add your own equations here!
-                # Example:
-                # equation = [3, 1, 2, 5] = f(x) = 3 + x + 2*x^2 + 5*x^3
-            ]
-
-# initialize the first equation.
-eqIndx = 0;
-equation = equations[eqIndx]
-
-# SELECT A SCALE FOR THE GRID.
-homeScale = 50
-scale = homeScale
-
-# SELECT A COLOR FOR YOUR FUNCTIONS.
-color = "purple"
-
-# Initialize main constants.
-width = 720
-height = 720
-origin = Vector2(width/2, height/2) # Centered origin.
-
-# Set the window up.
-screen = display.set_mode((width, height))
-display.set_caption("Math Graphs")
-
 
 # Draw a grid with respect to origin scaled in intervals of 'scale' with color 'clr'.
 def drawGrid(scale, clr):
@@ -74,29 +40,6 @@ def plotPlane(scale):
 def displayAll(scale, equation):
     screen.fill("black")
     plotPlane(scale)
-    plotEq(equation, scale)
-    display.flip()
-
-# Returns f(x)
-def applyEq(x, equation):
-    y = 0
-    for exp in range(0, equation.__len__()):
-        y += equation[exp]*power(x, exp)
-    return y
-
-# Plot 'equation' with respect to 'scale'.
-def plotEq(equation, scale):
-    for x in range(-int(origin.x), int(origin.x)+1):
-        x2 = x+1
-        y = -scale*applyEq(x/scale, equation)
-        y2 = -scale*applyEq(x2/scale, equation)
-        draw.line(screen, color, origin + (x, y), origin + (x2, y2), 4)
-
-# Draw the integral of an equation.
-def plotIntegral(equation, scale):
-    for x in range(-int(origin.x), int(origin.x)+1):
-        y = -scale*applyEq(x/scale, equation)
-        draw.line(screen, (50, 100, 100), origin + (x, y), origin + (x, 0), 1)
     plotEq(equation, scale)
     display.flip()
 

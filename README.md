@@ -5,7 +5,7 @@ Test its limits by adding your own equations!
 
 Zoom in and out with arrow keys, change current equation with 'SPACE', reset zoom with 'H'. You can also press 'I' to visualize the integral of any shown function. Feel free to add more functionalities to it!
 
-Run with ```` python3 mathplotter.py ```` <br />
+Run with ```` python3 main.py ```` <br />
 Get pygame ```` sudo apt-get install python3-pygame ````
 
 Preview:
